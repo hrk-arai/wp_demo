@@ -14,13 +14,17 @@
 
 * 事前作業
   - インスタンスを起動しておく
+  - gitコマンドをインストール```yum install -y git```
 
 * 作業手順
 
+  - 構築対象のホストにSSHでrootログインして以下を実施(rootがNGの場合には、必要に応じてsudo)
+
 ```
-# 構築対象のホストにSSHでrootログインして以下を実施(rootがNGの場合には、必要に応じてsudo)
 $ curl -L http://www.opscode.com/chef/install.sh | sudo bash
 $ git clone https://github.com/hrk-arai/wp_demo.git chef-repo
 $ cd chef-repo
-$ chef-solo -c solo.rb -j solo.json -o recipe[wordpress::default];
+$ chef-solo -c solo.rb -j solo.json
 ```
+
+  - ブラウザから構築対象のホストにhttpでアクセスして接続確認
