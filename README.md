@@ -27,4 +27,4 @@ $ cd chef-repo
 $ chef-solo -c solo.rb -j solo.json
 ```
 
-  - ブラウザから構築対象のホストにhttpでアクセスして接続確認(http://<ipaddress>)
+  - ブラウザから構築対象のホストにhttpでアクセスして接続確認(```http://<ipaddress>```)
